@@ -42,8 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Converters\NegatedConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\FirstViewModel.cs" />
+    <Compile Include="ViewModels\BaseScanViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\MessageViewModel.cs" />
+    <Compile Include="ViewModels\ScanAsMessageViewModel.cs" />
+    <Compile Include="ViewModels\ScanAsTaskViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
@@ -63,9 +68,13 @@
     <Content Include="ToDo-MvvmCross\_ Core.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NFC\DevelopingTrends.MvxPlugins.NFC\DevelopingTrends.MvxPlugins.NFC.csproj">
+    <ProjectReference Include="..\..\..\NFC\DevelopingTrends.MvxPlugins.NFC\DevelopingTrends.MvxPlugins.NFC.csproj">
       <Project>{fafa0c5d-418f-4dc7-89fa-e3975f4c2cbb}</Project>
       <Name>DevelopingTrends.MvxPlugins.NFC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NFC\NdefLibrary\NdefLibrary.csproj">
+      <Project>{6fa6963f-89cc-47e5-af24-79c997ab871d}</Project>
+      <Name>NdefLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

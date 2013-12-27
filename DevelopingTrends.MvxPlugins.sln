@@ -15,49 +15,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopingTrends.Sample.NFC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopingTrends.MvxPlugins.NFC", "NFC\DevelopingTrends.MvxPlugins.NFC\DevelopingTrends.MvxPlugins.NFC.csproj", "{FAFA0C5D-418F-4DC7-89FA-E3975F4C2CBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopingTrends.Sample.NFC.Core", "DevelopingTrends.Sample.NFC.Core\DevelopingTrends.Sample.NFC.Core.csproj", "{3C509CED-07C1-4194-8106-6896C67F0320}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopingTrends.MvxPlugins.NFC.Droid", "NFC\DevelopingTrends.MvxPlugins.NFC.Droid\DevelopingTrends.MvxPlugins.NFC.Droid.csproj", "{26ABACBF-9514-46E4-B8F8-D99944EAE7DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopingTrends.Sample.NFC.Droid", "Samples\NFC\DevelopingTrends.Sample.NFC.Droid\DevelopingTrends.Sample.NFC.Droid.csproj", "{BA098742-029B-4200-9CBA-2EAA8F8D5862}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NdefLibrary", "NFC\NdefLibrary\NdefLibrary.csproj", "{6FA6963F-89CC-47E5-AF24-79C997AB871D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopingTrends.Sample.NFC.Core", "Samples\NFC\DevelopingTrends.Sample.NFC.Core\DevelopingTrends.Sample.NFC.Core.csproj", "{3C509CED-07C1-4194-8106-6896C67F0320}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://developingtrends.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = NFC\\DevelopingTrends.MvxPlugins.NFC.WindowsPhone\\DevelopingTrends.MvxPlugins.NFC.WindowsPhone.csproj
-		SccProjectTopLevelParentUniqueName1 = DevelopingTrends.MvxPlugins.sln
-		SccProjectName1 = NFC/DevelopingTrends.MvxPlugins.NFC.WindowsPhone
-		SccLocalPath1 = NFC\\DevelopingTrends.MvxPlugins.NFC.WindowsPhone
-		SccProjectUniqueName2 = NFC\\DevelopingTrends.MvxPlugins.NFC\\DevelopingTrends.MvxPlugins.NFC.csproj
-		SccProjectTopLevelParentUniqueName2 = DevelopingTrends.MvxPlugins.sln
-		SccProjectName2 = NFC/DevelopingTrends.MvxPlugins.NFC
-		SccLocalPath2 = NFC\\DevelopingTrends.MvxPlugins.NFC
-		SccProjectUniqueName3 = Samples\\NFC\\DevelopingTrends.Sample.NFC.WindowsPhone\\DevelopingTrends.Sample.NFC.WindowsPhone.csproj
-		SccProjectTopLevelParentUniqueName3 = DevelopingTrends.MvxPlugins.sln
-		SccProjectName3 = Samples/NFC/DevelopingTrends.Sample.NFC.WindowsPhone
-		SccLocalPath3 = Samples\\NFC\\DevelopingTrends.Sample.NFC.WindowsPhone
-		SccProjectUniqueName4 = NFC\\DevelopingTrends.MvxPlugins.NFC.Droid\\DevelopingTrends.MvxPlugins.NFC.Droid.csproj
-		SccProjectTopLevelParentUniqueName4 = DevelopingTrends.MvxPlugins.sln
-		SccProjectName4 = NFC/DevelopingTrends.MvxPlugins.NFC.Droid
-		SccLocalPath4 = NFC\\DevelopingTrends.MvxPlugins.NFC.Droid
-		SccProjectUniqueName5 = DevelopingTrends.Sample.NFC.Core\\DevelopingTrends.Sample.NFC.Core.csproj
-		SccProjectTopLevelParentUniqueName5 = DevelopingTrends.MvxPlugins.sln
-		SccProjectName5 = DevelopingTrends.Sample.NFC.Core
-		SccLocalPath5 = DevelopingTrends.Sample.NFC.Core
-		SccProjectUniqueName6 = Samples\\NFC\\DevelopingTrends.Sample.NFC.Droid\\DevelopingTrends.Sample.NFC.Droid.csproj
-		SccProjectTopLevelParentUniqueName6 = DevelopingTrends.MvxPlugins.sln
-		SccProjectName6 = Samples/NFC/DevelopingTrends.Sample.NFC.Droid
-		SccLocalPath6 = Samples\\NFC\\DevelopingTrends.Sample.NFC.Droid
-		SccProjectUniqueName7 = NFC\\NdefLibrary\\NdefLibrary.csproj
-		SccProjectTopLevelParentUniqueName7 = DevelopingTrends.MvxPlugins.sln
-		SccProjectName7 = NFC/NdefLibrary
-		SccLocalPath7 = NFC\\NdefLibrary
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -105,14 +71,6 @@ Global
 		{FAFA0C5D-418F-4DC7-89FA-E3975F4C2CBB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FAFA0C5D-418F-4DC7-89FA-E3975F4C2CBB}.Release|ARM.ActiveCfg = Release|Any CPU
 		{FAFA0C5D-418F-4DC7-89FA-E3975F4C2CBB}.Release|x86.ActiveCfg = Release|Any CPU
-		{3C509CED-07C1-4194-8106-6896C67F0320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C509CED-07C1-4194-8106-6896C67F0320}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C509CED-07C1-4194-8106-6896C67F0320}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{3C509CED-07C1-4194-8106-6896C67F0320}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{3C509CED-07C1-4194-8106-6896C67F0320}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C509CED-07C1-4194-8106-6896C67F0320}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C509CED-07C1-4194-8106-6896C67F0320}.Release|ARM.ActiveCfg = Release|Any CPU
-		{3C509CED-07C1-4194-8106-6896C67F0320}.Release|x86.ActiveCfg = Release|Any CPU
 		{26ABACBF-9514-46E4-B8F8-D99944EAE7DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{26ABACBF-9514-46E4-B8F8-D99944EAE7DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26ABACBF-9514-46E4-B8F8-D99944EAE7DB}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -139,6 +97,14 @@ Global
 		{6FA6963F-89CC-47E5-AF24-79C997AB871D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6FA6963F-89CC-47E5-AF24-79C997AB871D}.Release|ARM.ActiveCfg = Release|Any CPU
 		{6FA6963F-89CC-47E5-AF24-79C997AB871D}.Release|x86.ActiveCfg = Release|Any CPU
+		{3C509CED-07C1-4194-8106-6896C67F0320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C509CED-07C1-4194-8106-6896C67F0320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C509CED-07C1-4194-8106-6896C67F0320}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{3C509CED-07C1-4194-8106-6896C67F0320}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3C509CED-07C1-4194-8106-6896C67F0320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C509CED-07C1-4194-8106-6896C67F0320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C509CED-07C1-4194-8106-6896C67F0320}.Release|ARM.ActiveCfg = Release|Any CPU
+		{3C509CED-07C1-4194-8106-6896C67F0320}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -150,7 +116,7 @@ Global
 		{6FA6963F-89CC-47E5-AF24-79C997AB871D} = {49E24FD0-1A1F-49D3-AC7A-CBACB6E6F8CA}
 		{2FE54ADC-FE5A-4E70-9293-3F57E5130EB9} = {A48EADF3-3125-466F-A361-F5EC1922466F}
 		{6A4BE1A5-28DE-4A19-A025-9261304B8027} = {2FE54ADC-FE5A-4E70-9293-3F57E5130EB9}
-		{3C509CED-07C1-4194-8106-6896C67F0320} = {2FE54ADC-FE5A-4E70-9293-3F57E5130EB9}
 		{BA098742-029B-4200-9CBA-2EAA8F8D5862} = {2FE54ADC-FE5A-4E70-9293-3F57E5130EB9}
+		{3C509CED-07C1-4194-8106-6896C67F0320} = {2FE54ADC-FE5A-4E70-9293-3F57E5130EB9}
 	EndGlobalSection
 EndGlobal

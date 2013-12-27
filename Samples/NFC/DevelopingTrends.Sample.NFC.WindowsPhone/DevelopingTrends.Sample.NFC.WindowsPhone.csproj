@@ -208,10 +208,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\DevelopingTrends.Sample.NFC.Core\DevelopingTrends.Sample.NFC.Core.csproj">
-      <Project>{3C509CED-07C1-4194-8106-6896C67F0320}</Project>
-      <Name>DevelopingTrends.Sample.NFC.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\NFC\DevelopingTrends.MvxPlugins.NFC.WindowsPhone\DevelopingTrends.MvxPlugins.NFC.WindowsPhone.csproj">
       <Project>{A015607C-0F92-4360-BC28-C46D96DED67A}</Project>
       <Name>DevelopingTrends.MvxPlugins.NFC.WindowsPhone</Name>
@@ -219,6 +215,10 @@
     <ProjectReference Include="..\..\..\NFC\DevelopingTrends.MvxPlugins.NFC\DevelopingTrends.MvxPlugins.NFC.csproj">
       <Project>{FAFA0C5D-418F-4DC7-89FA-E3975F4C2CBB}</Project>
       <Name>DevelopingTrends.MvxPlugins.NFC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DevelopingTrends.Sample.NFC.Core\DevelopingTrends.Sample.NFC.Core.csproj">
+      <Project>{3C509CED-07C1-4194-8106-6896C67F0320}</Project>
+      <Name>DevelopingTrends.Sample.NFC.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

@@ -148,10 +148,6 @@
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\DevelopingTrends.Sample.NFC.Core\DevelopingTrends.Sample.NFC.Core.csproj">
-      <Project>{3c509ced-07c1-4194-8106-6896c67f0320}</Project>
-      <Name>DevelopingTrends.Sample.NFC.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\NFC\DevelopingTrends.MvxPlugins.NFC.Droid\DevelopingTrends.MvxPlugins.NFC.Droid.csproj">
       <Project>{26abacbf-9514-46e4-b8f8-d99944eae7db}</Project>
       <Name>DevelopingTrends.MvxPlugins.NFC.Droid</Name>
@@ -159,6 +155,10 @@
     <ProjectReference Include="..\..\..\NFC\DevelopingTrends.MvxPlugins.NFC\DevelopingTrends.MvxPlugins.NFC.csproj">
       <Project>{fafa0c5d-418f-4dc7-89fa-e3975f4c2cbb}</Project>
       <Name>DevelopingTrends.MvxPlugins.NFC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DevelopingTrends.Sample.NFC.Core\DevelopingTrends.Sample.NFC.Core.csproj">
+      <Project>{3c509ced-07c1-4194-8106-6896c67f0320}</Project>
+      <Name>DevelopingTrends.Sample.NFC.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
