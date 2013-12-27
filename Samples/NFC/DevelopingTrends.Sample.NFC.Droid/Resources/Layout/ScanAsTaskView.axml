@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <TextView
+    android:text="Scanning..."
+     android:layout_width="match_parent"
+        android:layout_height="wrap_content"       
+        local:MvxBind="Visibility Visibility(IsScanning)" 
+    />
+  <TextView
+  android:text="Scan Timed Out :-("
+   android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      local:MvxBind="Visibility Visibility(HasTimedOut)"
+    />
+    <Button
+        android:text="Start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"       
+        local:MvxBind="Click ScanCommand; Enabled IsScanning, Converter=Negated" />
+    <Button
+        android:text="Cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        local:MvxBind="Click StopCommand; Enabled IsScanning" />
+  <Mvx.MvxListView 
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      local:MvxBind="ItemsSource Messages"
+      local:MvxItemTemplate="@layout/listitem_message" />
+</LinearLayout>
