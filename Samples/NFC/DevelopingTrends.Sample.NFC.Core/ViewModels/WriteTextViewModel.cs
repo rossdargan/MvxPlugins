@@ -11,13 +11,13 @@ namespace DevelopingTrends.Sample.NFC.Core.ViewModels
 {
     public class WriteTextViewModel : MvxViewModel
     {
-        private readonly IMvxNFCWriteTask _writeTask;
+        private readonly IWriteTask _writeTask;
         private string _message;
         private ICommand _writeTagCommand;
         private bool _writingTag;
         private string _result;
 
-        public WriteTextViewModel(DevelopingTrends.MvxPlugins.NFC.IMvxNFCWriteTask writeTask)
+        public WriteTextViewModel(DevelopingTrends.MvxPlugins.NFC.IWriteTask writeTask)
         {
             _writeTask = writeTask;
             _writeTagCommand = new MvxCommand(DoWriteTag);

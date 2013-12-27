@@ -13,9 +13,9 @@ namespace DevelopingTrends.MvxPlugins.NFC.Touch
 
         public void Load()
         {
-            Mvx.RegisterType<IMvxNFCWatcher, MvxNFCNullImplementation>();
-            Mvx.RegisterType<IMvxNFCReadTask, MvxNFCNullImplementation>();
-            Mvx.RegisterType<IMvxNFCWriteTask, MvxNFCNullImplementation>();
+            Mvx.RegisterType<IWatcher, NullImplementation>();
+            Mvx.RegisterType<IReadTask, NullImplementation>();
+            Mvx.RegisterType<IWriteTask, NullImplementation>();
         }
     }
 }

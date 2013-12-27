@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevelopingTrends.MvxPlugins.NFC
 {
-    public interface IMvxNFCWatcher : IMvxNFC
+    public interface IWatcher : INFC
     {
         /// <summary>
         /// Subscribe to the MVX message queue. MvxNFCMessageReceived will be send when a new NFC tag is read.

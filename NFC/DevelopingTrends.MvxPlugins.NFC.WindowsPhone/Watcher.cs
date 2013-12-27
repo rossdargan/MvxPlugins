@@ -7,11 +7,11 @@ using Cirrious.MvvmCross.Plugins.Messenger;
 
 namespace DevelopingTrends.MvxPlugins.NFC.WindowsPhone
 {
-    public class MvxNFCWatcher : MvxNFCReadBase, IMvxNFCWatcher
+    public class Watcher : ReadBase, IWatcher
     {
         private readonly IMvxMessenger _messenger;
         private readonly object _lock = new object();
-        public MvxNFCWatcher(IMvxMessenger messenger)
+        public Watcher(IMvxMessenger messenger)
         {
             _messenger = messenger;
         }
@@ -34,7 +34,8 @@ namespace DevelopingTrends.MvxPlugins.NFC.WindowsPhone
             }
             _subscription = _proximityDevice.SubscribeForMessage("NDEF", (sender, message) =>
             {
-                var nfcMessage = new MvxNFCMessageReceived(GetMessage(message),this);
+                
+                var nfcMessage = GetMessage(message);
                 _messenger.Publish(nfcMessage);
             });
 

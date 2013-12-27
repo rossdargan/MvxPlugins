@@ -80,11 +80,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
-    <Compile Include="MvxNFCDroidBase.cs" />
-    <Compile Include="MvxNFCReadBase.cs" />
-    <Compile Include="MvxNFCReadTask.cs" />
-    <Compile Include="MvxNFCWatcher.cs" />
-    <Compile Include="MvxNFCWriteTask.cs" />
+    <Compile Include="DroidBase.cs" />
+    <Compile Include="ReadBase.cs" />
+    <Compile Include="ReadTask.cs" />
+    <Compile Include="ReadWatcher.cs" />
+    <Compile Include="WriteTask.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

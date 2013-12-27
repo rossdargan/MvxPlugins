@@ -7,15 +7,16 @@ using Cirrious.MvvmCross.Plugins.Messenger;
 
 namespace DevelopingTrends.MvxPlugins.NFC
 {
-    public class MvxNFCMessageReceived : MvxMessage
+    public class MessageReceived : MvxMessage
     {
-      
+        public string TagId { get; set; }
         public NdefLibrary.Ndef.NdefMessage Message { get; set; }
 
 
-        public MvxNFCMessageReceived(NdefLibrary.Ndef.NdefMessage message, object sender)
+        public MessageReceived(string tagId, NdefLibrary.Ndef.NdefMessage message, object sender)
             : base(sender)
         {
+            TagId = tagId;
             Message = message;
         }
     }

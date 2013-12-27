@@ -90,9 +90,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
-    <Compile Include="MvxNFCReadTask.cs" />
-    <Compile Include="MvxNFCReadBase.cs" />
-    <Compile Include="MvxNFCWatcher.cs" />
+    <Compile Include="ReadTask.cs" />
+    <Compile Include="ReadBase.cs" />
+    <Compile Include="Watcher.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

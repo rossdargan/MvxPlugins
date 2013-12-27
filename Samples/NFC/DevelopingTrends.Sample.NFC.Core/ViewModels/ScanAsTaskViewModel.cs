@@ -14,7 +14,7 @@ namespace DevelopingTrends.Sample.NFC.Core.ViewModels
     public class ScanAsTaskViewModel
         : BaseScanViewModel
     {
-        private readonly IMvxNFCReadTask _nfcReadTask;
+        private readonly IReadTask _nfcReadTask;
         private bool _hasTimedOut;
 
         public bool HasTimedOut
@@ -28,7 +28,7 @@ namespace DevelopingTrends.Sample.NFC.Core.ViewModels
         }
 
 
-        public ScanAsTaskViewModel( IMvxNFCReadTask readTask)
+        public ScanAsTaskViewModel( IReadTask readTask)
         {
             _nfcReadTask = readTask;
 
@@ -67,7 +67,7 @@ namespace DevelopingTrends.Sample.NFC.Core.ViewModels
                 _cancellationTokenSource = new CancellationTokenSource();
 
                 var record = await _nfcReadTask.ReadTag(_cancellationTokenSource.Token, TimeSpan.FromSeconds(30));
-                UpdateDisplay(record);
+                UpdateDisplay(record.Message);
                 _cancellationTokenSource = null;
 
             }

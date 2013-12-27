@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.ServiceModel.Channels;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Phone.Tasks;
 
 namespace DevelopingTrends.MvxPlugins.NFC.WindowsPhone
 {
-    public class MvxNFCReadTask : MvxNFCReadBase, IMvxNFCReadTask
+    public class ReadTask : ReadBase, IReadTask
     {        
-        public async Task<NdefLibrary.Ndef.NdefMessage> ReadTag(CancellationToken cancellationToken, TimeSpan timeout)
+        public async Task<MessageReceived> ReadTag(CancellationToken cancellationToken, TimeSpan timeout)
         {
             if (!IsSupported)
             {
@@ -27,9 +28,9 @@ namespace DevelopingTrends.MvxPlugins.NFC.WindowsPhone
             }
             long subscription;
 
-            TaskCompletionSource<NdefLibrary.Ndef.NdefMessage> result = new TaskCompletionSource<NdefLibrary.Ndef.NdefMessage>(); //needs a message type
+            TaskCompletionSource<MessageReceived> result = new TaskCompletionSource<MessageReceived>(); //needs a message type
 
-            using (cancellationToken.Register((s => ((TaskCompletionSource<NdefLibrary.Ndef.NdefMessage>)s).TrySetCanceled()), result))
+            using (cancellationToken.Register((s => ((TaskCompletionSource<MessageReceived>)s).TrySetCanceled()), result))
             {
                 subscription = _proximityDevice.SubscribeForMessage("NDEF", (sender, message) =>
                 {
@@ -63,13 +64,13 @@ namespace DevelopingTrends.MvxPlugins.NFC.WindowsPhone
         }
 
 
-        public Task<NdefLibrary.Ndef.NdefMessage> ReadTag(CancellationToken cancellationToken)
+        public Task<MessageReceived> ReadTag(CancellationToken cancellationToken)
         {
             
             return ReadTag(cancellationToken,default(TimeSpan));
            
         }
-        public Task<NdefLibrary.Ndef.NdefMessage> ReadTag()
+        public Task<MessageReceived> ReadTag()
         {
             return ReadTag(CancellationToken.None, default(TimeSpan));
         }

@@ -9,13 +9,13 @@ using Cirrious.CrossCore.Droid.Views;
 
 namespace DevelopingTrends.MvxPlugins.NFC.Droid
 {
-    public abstract class MvxNFCDroidBase : IMvxNFC
+    public abstract class DroidBase : INFC
     {
         protected bool _haveManifestPermission = false;
         protected bool _dontThrowExpceptionWhenNotSupported = true;
         protected NfcAdapter _nfcAdapter;
 
-        protected MvxNFCDroidBase()
+        protected DroidBase()
         {
             _nfcAdapter = NfcAdapter.GetDefaultAdapter(TopActivity);
             if (_nfcAdapter != null)

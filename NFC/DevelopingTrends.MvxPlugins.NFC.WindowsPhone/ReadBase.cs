@@ -5,12 +5,12 @@ using Cirrious.CrossCore;
 
 namespace DevelopingTrends.MvxPlugins.NFC.WindowsPhone
 {
-    public abstract class MvxNFCReadBase : IMvxNFC
+    public abstract class ReadBase : INFC
     {
         protected bool _dontThrowExpceptionWhenNotSupported = true;
         protected ProximityDevice _proximityDevice;
 
-        public MvxNFCReadBase()
+        public ReadBase()
         {
             try
             {
@@ -29,11 +29,11 @@ namespace DevelopingTrends.MvxPlugins.NFC.WindowsPhone
             get { return _proximityDevice!=null; }
         }
 
-        protected NdefLibrary.Ndef.NdefMessage GetMessage(ProximityMessage message)
+        protected MessageReceived GetMessage(ProximityMessage message)
         {
             
             var buffer = message.Data.ToArray();
-            return NdefLibrary.Ndef.NdefMessage.FromByteArray(buffer);
+            return new MessageReceived("id!!", NdefLibrary.Ndef.NdefMessage.FromByteArray(buffer),this);
         }
     }
 }

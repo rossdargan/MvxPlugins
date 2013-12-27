@@ -14,17 +14,17 @@ namespace DevelopingTrends.Sample.NFC.Core.ViewModels
     public class ScanAsMessageViewModel
         : BaseScanViewModel
     {
-        private readonly IMvxNFCWatcher _watcher;
+        private readonly IWatcher _watcher;
         private MvxSubscriptionToken _messageToken;
         private string _scanLastFound;
-        public ScanAsMessageViewModel(IMvxMessenger messenger, IMvxNFCWatcher watcher)
+        public ScanAsMessageViewModel(IMvxMessenger messenger, IWatcher watcher)
         {
             _watcher = watcher;
-            _messageToken = messenger.SubscribeOnMainThread<MvxNFCMessageReceived>(MessageRecieved);
+            _messageToken = messenger.SubscribeOnMainThread<MessageReceived>(MessageRecieved);
             _watcher.Start();
         }
 
-        private void MessageRecieved(MvxNFCMessageReceived obj)
+        private void MessageRecieved(MessageReceived obj)
         {
             UpdateDisplay(obj.Message);
         }

@@ -16,7 +16,7 @@ namespace DevelopingTrends.MvxPlugins.NFC
         Unkown,
         TagLostDuringWrite
     }
-    public class MvxNfcWriteResult
+    public class WriteResult
     {
         public bool DidSucceed
         {

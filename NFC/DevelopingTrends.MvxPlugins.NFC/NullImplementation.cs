@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevelopingTrends.MvxPlugins.NFC
 {
-    public class MvxNFCNullImplementation : IMvxNFCWriteTask, IMvxNFCReadTask, IMvxNFCWatcher
+    public class NullImplementation : IWriteTask, IReadTask, IWatcher
 
     {
         public bool Start()
@@ -29,37 +29,37 @@ namespace DevelopingTrends.MvxPlugins.NFC
 
         }
 
-        public Task<NdefLibrary.Ndef.NdefMessage> ReadTag(System.Threading.CancellationToken cancellationToken, TimeSpan timeout)
+        public Task<WriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message)
         {
             throw new NotImplementedException();
         }
 
-        public Task<NdefLibrary.Ndef.NdefMessage> ReadTag(System.Threading.CancellationToken cancellationToken)
+        public Task<WriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message, System.Threading.CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
 
-        public Task<NdefLibrary.Ndef.NdefMessage> ReadTag()
+        public Task<WriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message, TimeSpan timeout)
         {
             throw new NotImplementedException();
         }
 
-        public Task<MvxNfcWriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message)
+        public Task<WriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message, System.Threading.CancellationToken cancellationToken, TimeSpan timeout)
         {
             throw new NotImplementedException();
         }
 
-        public Task<MvxNfcWriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message, System.Threading.CancellationToken cancellationToken)
+        public Task<MessageReceived> ReadTag(System.Threading.CancellationToken cancellationToken, TimeSpan timeout)
         {
             throw new NotImplementedException();
         }
 
-        public Task<MvxNfcWriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message, TimeSpan timeout)
+        public Task<MessageReceived> ReadTag(System.Threading.CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
 
-        public Task<MvxNfcWriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message, System.Threading.CancellationToken cancellationToken, TimeSpan timeout)
+        public Task<MessageReceived> ReadTag()
         {
             throw new NotImplementedException();
         }

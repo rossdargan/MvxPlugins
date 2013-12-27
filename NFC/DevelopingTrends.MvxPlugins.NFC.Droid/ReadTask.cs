@@ -15,20 +15,21 @@ using NdefLibrary.Ndef;
 
 namespace DevelopingTrends.MvxPlugins.NFC.Droid
 {
-    class MvxNFCReadTask : MvxNFCReadBase, IMvxNFCReadTask
+    class ReadTask : ReadBase, IReadTask
     {
             
-        protected override void NewMessage(NdefMessage message)
+        protected override void NewMessage(string tagid, NdefMessage message)
         {
             if (_result != null)
             {
-                _result.TrySetResult(message);
+                MessageReceived result = new MessageReceived(tagid,message,this);
+                _result.TrySetResult(result);
             }
         }
 
-        private TaskCompletionSource<NdefMessage> _result;
+        private TaskCompletionSource<MessageReceived> _result;
 
-        public async System.Threading.Tasks.Task<NdefMessage> ReadTag(System.Threading.CancellationToken cancellationToken, TimeSpan timeout)
+        public async System.Threading.Tasks.Task<MessageReceived> ReadTag(System.Threading.CancellationToken cancellationToken, TimeSpan timeout)
         {
             if (!IsSupported)
             {
@@ -38,7 +39,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
                 }
                 throw new NotSupportedException("This device does not support NFC (or perhaps it's disabled)");
             }
-            _result = new TaskCompletionSource<NdefMessage>(); //needs a message type
+            _result = new TaskCompletionSource<MessageReceived>(); //needs a message type
             Task timeoutTask = null;
             if (timeout != default(TimeSpan))
             {
@@ -46,7 +47,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
             }
 
 
-            using (cancellationToken.Register((s => ((TaskCompletionSource<NdefMessage>)s).TrySetCanceled()), _result))
+            using (cancellationToken.Register((s => ((TaskCompletionSource<MessageReceived>)s).TrySetCanceled()), _result))
             {
                
                     AttachEvents();
@@ -70,7 +71,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
                         DetachEvents();
                         return null;
                     }
-                    NdefMessage result = await _result.Task;
+                    MessageReceived result = await _result.Task;
                     //We don't need to stop the foreground dispatch. Prior to the message been sent the application calls
                     //OnPause which removes the foreground dispatch. By removing the events we prevent it from being added back.
                     //StopForegroundDispatch();
@@ -81,12 +82,12 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
             }
         }
 
-        public System.Threading.Tasks.Task<NdefMessage> ReadTag(System.Threading.CancellationToken cancellationToken)
+        public System.Threading.Tasks.Task<MessageReceived> ReadTag(System.Threading.CancellationToken cancellationToken)
         {
             return ReadTag(cancellationToken, default(TimeSpan));
 
         }
-        public System.Threading.Tasks.Task<NdefMessage> ReadTag()
+        public System.Threading.Tasks.Task<MessageReceived> ReadTag()
         {
             return ReadTag(CancellationToken.None, default(TimeSpan));
 

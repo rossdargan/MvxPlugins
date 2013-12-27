@@ -19,13 +19,13 @@ using NdefMessage = NdefLibrary.Ndef.NdefMessage;
 
 namespace DevelopingTrends.MvxPlugins.NFC.Droid
 {
-    public class MvxNFCWriteTask : MvxNFCDroidBase, IMvxNFCWriteTask
+    public class MvxNFCWriteTask : DroidBase, IWriteTask
     {
         private NdefMessage _messageToWrite;
 
         protected override async void NewIntent(Cirrious.CrossCore.Core.MvxValueEventArgs<Intent> e)
         {
-            MvxNfcWriteResult writeResult = new MvxNfcWriteResult();
+            WriteResult writeResult = new WriteResult();
             writeResult.ReasonForFailure = FailureReasons.Unkown;
 
 
@@ -87,24 +87,24 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
         }
 
 
-        public Task<MvxNfcWriteResult> WriteTag(NdefMessage message)
+        public Task<WriteResult> WriteTag(NdefMessage message)
         {
             return WriteTag(message, CancellationToken.None);
         }
 
-        public Task<MvxNfcWriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message, System.Threading.CancellationToken cancellationToken)
+        public Task<WriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message, System.Threading.CancellationToken cancellationToken)
         {
             return WriteTag(message, cancellationToken, TimeSpan.FromTicks(0));
 
         }
 
-        public Task<MvxNfcWriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message, TimeSpan timeout)
+        public Task<WriteResult> WriteTag(NdefLibrary.Ndef.NdefMessage message, TimeSpan timeout)
         {
             return WriteTag(message, CancellationToken.None, timeout);
         }
 
-        private TaskCompletionSource<MvxNfcWriteResult> _taskCompletionSource=null;
-        public async Task<MvxNfcWriteResult> WriteTag(NdefMessage message, CancellationToken cancellationToken, TimeSpan timeout)
+        private TaskCompletionSource<WriteResult> _taskCompletionSource=null;
+        public async Task<WriteResult> WriteTag(NdefMessage message, CancellationToken cancellationToken, TimeSpan timeout)
         {
             {
                 if (!IsSupported)
@@ -124,7 +124,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
                         _taskCompletionSource.TrySetCanceled();
                     }
                 }
-                _taskCompletionSource = new TaskCompletionSource<MvxNfcWriteResult>();
+                _taskCompletionSource = new TaskCompletionSource<WriteResult>();
 
 
                 Task timeoutTask = null;
@@ -134,7 +134,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
                 }
 
 
-                using (cancellationToken.Register((s => ((TaskCompletionSource<MvxNfcWriteResult>)s).TrySetCanceled()), _taskCompletionSource))
+                using (cancellationToken.Register((s => ((TaskCompletionSource<WriteResult>)s).TrySetCanceled()), _taskCompletionSource))
                 {
                     _messageToWrite = message;
 

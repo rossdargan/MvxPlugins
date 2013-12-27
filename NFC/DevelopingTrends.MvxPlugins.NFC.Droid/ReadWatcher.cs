@@ -17,13 +17,13 @@ using Cirrious.MvvmCross.Plugins.Messenger;
 
 namespace DevelopingTrends.MvxPlugins.NFC.Droid
 {
-    internal class MvxNFCWatcher : MvxNFCReadBase, IMvxNFCWatcher
+    internal class ReadWatcher : ReadBase, IWatcher
     {
         private bool _currentlyScanning = false;
         private readonly IMvxMessenger _messenger;
         private readonly object _lock = new object();
 
-        public MvxNFCWatcher(IMvxMessenger messenger)
+        public ReadWatcher(IMvxMessenger messenger)
         {
             _messenger = messenger;
         }
@@ -68,10 +68,10 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
 
         
 
-        protected override void NewMessage(NdefLibrary.Ndef.NdefMessage message)
+        protected override void NewMessage(string tagId,NdefLibrary.Ndef.NdefMessage message)
         {
             
-            var nfcMessage = new MvxNFCMessageReceived(message, this);
+            var nfcMessage = new MessageReceived(tagId, message, this);
             _messenger.Publish(nfcMessage);
         }
     }

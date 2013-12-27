@@ -43,13 +43,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMvxNFC.cs" />
-    <Compile Include="IMvxNFCReadTask.cs" />
-    <Compile Include="IMvxNFCWatcher.cs" />
-    <Compile Include="IMvxNFCWriteTask.cs" />
-    <Compile Include="MvxNFCMessageReceived.cs" />
-    <Compile Include="MvxNFCNullImplementation.cs" />
-    <Compile Include="MvxNfcWriteResult.cs" />
+    <Compile Include="INFC.cs" />
+    <Compile Include="IReadTask.cs" />
+    <Compile Include="IWatcher.cs" />
+    <Compile Include="IWriteTask.cs" />
+    <Compile Include="MessageReceived.cs" />
+    <Compile Include="NullImplementation.cs" />
+    <Compile Include="WriteResult.cs" />
     <Compile Include="NFCTag.cs" />
     <Compile Include="PluginLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

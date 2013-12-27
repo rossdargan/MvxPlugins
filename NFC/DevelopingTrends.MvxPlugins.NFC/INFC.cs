@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DevelopingTrends.MvxPlugins.NFC
 {
-    public interface IMvxNFC
+    public interface INFC
     {
         bool IsSupported{ get; }      
     }
