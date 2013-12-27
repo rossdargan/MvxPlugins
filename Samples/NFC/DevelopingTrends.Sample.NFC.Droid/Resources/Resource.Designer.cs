@@ -123,6 +123,9 @@ namespace DevelopingTrends.Sample.NFC.Droid
 			// aapt resource value: 0x7f030005
 			public const int SplashScreen = 2130903045;
 			
+			// aapt resource value: 0x7f030006
+			public const int WriteTextView = 2130903046;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

@@ -14,4 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         local:MvxBind="Click ScanAsMessageCommand" />
+  <Button
+       android:text="Write Text to tag"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       local:MvxBind="Click WriteTextCommand" />
 </LinearLayout>
