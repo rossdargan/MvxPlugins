@@ -65,9 +65,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ToDo-MvvmCross\_ Core.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\NFC\DevelopingTrends.MvxPlugins.NFC\DevelopingTrends.MvxPlugins.NFC.csproj">
       <Project>{fafa0c5d-418f-4dc7-89fa-e3975f4c2cbb}</Project>
       <Name>DevelopingTrends.MvxPlugins.NFC</Name>

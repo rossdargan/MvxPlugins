@@ -10,7 +10,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.WindowsPhone
 {
     public class MvxNFCReadTask : MvxNFCReadBase, IMvxNFCReadTask
     {        
-        public async Task<NdefLibrary.Ndef.NdefMessage> ReadString(CancellationToken cancellationToken, TimeSpan timeout)
+        public async Task<NdefLibrary.Ndef.NdefMessage> ReadTag(CancellationToken cancellationToken, TimeSpan timeout)
         {
             if (!IsSupported)
             {
@@ -63,13 +63,15 @@ namespace DevelopingTrends.MvxPlugins.NFC.WindowsPhone
         }
 
 
-
-
-        public Task<NdefLibrary.Ndef.NdefMessage> ReadString(CancellationToken cancellationToken)
+        public Task<NdefLibrary.Ndef.NdefMessage> ReadTag(CancellationToken cancellationToken)
         {
             
-            return ReadString(cancellationToken,default(TimeSpan));
+            return ReadTag(cancellationToken,default(TimeSpan));
            
+        }
+        public Task<NdefLibrary.Ndef.NdefMessage> ReadTag()
+        {
+            return ReadTag(CancellationToken.None, default(TimeSpan));
         }
     }
 }

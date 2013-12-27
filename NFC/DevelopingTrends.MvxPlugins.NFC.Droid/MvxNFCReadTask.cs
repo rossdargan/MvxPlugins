@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
@@ -26,7 +27,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
 
         private TaskCompletionSource<NdefMessage> _result;
 
-        public async System.Threading.Tasks.Task<NdefMessage> ReadString(System.Threading.CancellationToken cancellationToken, TimeSpan timeout)
+        public async System.Threading.Tasks.Task<NdefMessage> ReadTag(System.Threading.CancellationToken cancellationToken, TimeSpan timeout)
         {
             if (!IsSupported)
             {
@@ -87,9 +88,14 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
             }
         }
 
-        public System.Threading.Tasks.Task<NdefMessage> ReadString(System.Threading.CancellationToken cancellationToken)
+        public System.Threading.Tasks.Task<NdefMessage> ReadTag(System.Threading.CancellationToken cancellationToken)
         {
-            return ReadString(cancellationToken, default(TimeSpan));
+            return ReadTag(cancellationToken, default(TimeSpan));
+
+        }
+        public System.Threading.Tasks.Task<NdefMessage> ReadTag()
+        {
+            return ReadTag(CancellationToken.None, default(TimeSpan));
 
         }
     }

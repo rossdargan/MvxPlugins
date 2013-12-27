@@ -10,8 +10,10 @@ namespace DevelopingTrends.MvxPlugins.NFC
 {
     public interface IMvxNFCReadTask : IMvxNFC
     {
-        Task<NdefMessage> ReadString(CancellationToken cancellationToken, TimeSpan timeout);
-        Task<NdefMessage> ReadString(CancellationToken cancellationToken);
+        Task<NdefMessage> ReadTag(CancellationToken cancellationToken, TimeSpan timeout);
+        Task<NdefMessage> ReadTag(CancellationToken cancellationToken);
+        Task<NdefMessage> ReadTag();
+
 
     }
 }
