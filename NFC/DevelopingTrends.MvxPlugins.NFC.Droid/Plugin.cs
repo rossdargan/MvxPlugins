@@ -22,6 +22,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
         {
             Mvx.RegisterType<IMvxNFCWatcher, MvxNFCWatcher>();
             Mvx.RegisterType<IMvxNFCReadTask, MvxNFCReadTask>();
+            Mvx.RegisterType<IMvxNFCWriteTask,MvxNFCWriteTask>();
         }
     }
 }

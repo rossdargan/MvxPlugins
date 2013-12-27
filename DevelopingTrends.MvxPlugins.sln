@@ -23,6 +23,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NdefLibrary", "NFC\NdefLibr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopingTrends.Sample.NFC.Core", "Samples\NFC\DevelopingTrends.Sample.NFC.Core\DevelopingTrends.Sample.NFC.Core.csproj", "{3C509CED-07C1-4194-8106-6896C67F0320}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6451B2AF-123E-44C6-B5A6-213AA363C7EF}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopingTrends.MvxPlugins.NFC.Touch", "NFC\DevelopingTrends.MvxPlugins.Nfc.Touch\DevelopingTrends.MvxPlugins.NFC.Touch.csproj", "{9CC165F5-7BD4-4C47-B5CA-3961317DF5A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +114,14 @@ Global
 		{3C509CED-07C1-4194-8106-6896C67F0320}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3C509CED-07C1-4194-8106-6896C67F0320}.Release|ARM.ActiveCfg = Release|Any CPU
 		{3C509CED-07C1-4194-8106-6896C67F0320}.Release|x86.ActiveCfg = Release|Any CPU
+		{9CC165F5-7BD4-4C47-B5CA-3961317DF5A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC165F5-7BD4-4C47-B5CA-3961317DF5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC165F5-7BD4-4C47-B5CA-3961317DF5A9}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{9CC165F5-7BD4-4C47-B5CA-3961317DF5A9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9CC165F5-7BD4-4C47-B5CA-3961317DF5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC165F5-7BD4-4C47-B5CA-3961317DF5A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CC165F5-7BD4-4C47-B5CA-3961317DF5A9}.Release|ARM.ActiveCfg = Release|Any CPU
+		{9CC165F5-7BD4-4C47-B5CA-3961317DF5A9}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,6 +131,7 @@ Global
 		{FAFA0C5D-418F-4DC7-89FA-E3975F4C2CBB} = {49E24FD0-1A1F-49D3-AC7A-CBACB6E6F8CA}
 		{26ABACBF-9514-46E4-B8F8-D99944EAE7DB} = {49E24FD0-1A1F-49D3-AC7A-CBACB6E6F8CA}
 		{6FA6963F-89CC-47E5-AF24-79C997AB871D} = {49E24FD0-1A1F-49D3-AC7A-CBACB6E6F8CA}
+		{9CC165F5-7BD4-4C47-B5CA-3961317DF5A9} = {49E24FD0-1A1F-49D3-AC7A-CBACB6E6F8CA}
 		{2FE54ADC-FE5A-4E70-9293-3F57E5130EB9} = {A48EADF3-3125-466F-A361-F5EC1922466F}
 		{6A4BE1A5-28DE-4A19-A025-9261304B8027} = {2FE54ADC-FE5A-4E70-9293-3F57E5130EB9}
 		{BA098742-029B-4200-9CBA-2EAA8F8D5862} = {2FE54ADC-FE5A-4E70-9293-3F57E5130EB9}

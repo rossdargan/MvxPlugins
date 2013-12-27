@@ -16,6 +16,7 @@ namespace DevelopingTrends.Sample.NFC.Core.ViewModels
     {
         private readonly IMvxNFCWatcher _watcher;
         private MvxSubscriptionToken _messageToken;
+        private string _scanLastFound;
         public ScanAsMessageViewModel(IMvxMessenger messenger, IMvxNFCWatcher watcher)
         {
             _watcher = watcher;

@@ -17,6 +17,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
 {
     class MvxNFCReadTask : MvxNFCReadBase, IMvxNFCReadTask
     {
+            
         protected override void NewMessage(NdefMessage message)
         {
             if (_result != null)
@@ -48,8 +49,6 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
             using (cancellationToken.Register((s => ((TaskCompletionSource<NdefMessage>)s).TrySetCanceled()), _result))
             {
                
-                try
-                {
                     AttachEvents();
                     StartForegroundMonitoring();
 
@@ -78,13 +77,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
                    
                     DetachEvents();
 
-                    return result;
-
-                }
-                finally
-                {
-                   
-                }
+                    return result;               
             }
         }
 

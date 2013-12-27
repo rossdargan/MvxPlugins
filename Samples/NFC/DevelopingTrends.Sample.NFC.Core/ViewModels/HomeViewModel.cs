@@ -15,6 +15,7 @@ namespace DevelopingTrends.Sample.NFC.Core.ViewModels
         {
             ScanAsTaskCommand = new MvxCommand(DoScanAsTask);
             ScanAsMessageCommand = new MvxCommand(DoScanAsMessage);
+            WriteTextCommand = new MvxCommand(DoWriteText);
         }
 
         private void DoScanAsMessage()
@@ -26,6 +27,10 @@ namespace DevelopingTrends.Sample.NFC.Core.ViewModels
         {
             ShowViewModel<ScanAsTaskViewModel>();
         }
+        private void DoWriteText()
+        {
+            ShowViewModel<WriteTextViewModel>();
+        }
 
         public ICommand ScanAsTaskCommand
         {
@@ -34,5 +39,7 @@ namespace DevelopingTrends.Sample.NFC.Core.ViewModels
         }
 
         public ICommand  ScanAsMessageCommand { get; set; }
+        public ICommand WriteTextCommand { get; set; }
+
     }
 }
