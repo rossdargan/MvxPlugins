@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+        <metadata>
+                <id>DevelopingTrends.MvxPlugins.NFC</id>
+                <version>1.0.1-beta1</version>
+                <title>MvvmCross - NFC Plugin</title>
+                <authors>Developing Trends</authors>
+                <owners>Ross Dargan</owners>
+                <licenseUrl>http://opensource.org/licenses/ms-pl.html</licenseUrl>
+                <projectUrl>https://github.com/rossdargan/MvxPlugins/tree/master/NFC</projectUrl>
+                <requireLicenseAcceptance>false</requireLicenseAcceptance>
+                <description>This package contains the 'NFC' plugin for MvvmCross v3 - Hot Tuna. This and other packages are currently under development...</description>
+                <tags>mvvm mvvmcross xamarin monodroid monotouch wpf windows8 winrt netcore wp wpdev windowsphone NFC</tags>
+                <dependencies>
+                  <dependency id="MvvmCross.HotTuna.CrossCore" version="3.1.1-beta1" />
+                  <dependency id="MvvmCross.HotTuna.Plugin.Messenger" version="3.1.1-beta1" />
+                </dependencies>
+        </metadata>
+        <files>                
+                <!-- PCL -->
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\DevelopingTrends.MvxPlugins.NFC.dll" target="lib\portable-win+net45+sl50+wp8+MonoAndroid+MonoTouch\DevelopingTrends.MvxPlugins.NFC.dll" />
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\NdefLibrary.dll" target="lib\portable-win+net45+sl50+wp8+MonoAndroid+MonoTouch\NdefLibrary.dll" />
+
+                <!-- wpf -->
+				<!--
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\DevelopingTrends.MvxPlugins.NFC.dll" target="lib\net45\DevelopingTrends.MvxPlugins.NFC.dll" />
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\NdefLibrary.dll" target="lib\net45\NdefLibrary.dll" />
+                <file src="..\bin\Release\Mvx\Wpf\DevelopingTrends.MvxPlugins.NFC.Wpf.dll" target="lib\net45\DevelopingTrends.MvxPlugins.NFC.Wpf.dll" />
+				<file src="NFCPluginBootstrap.cs.pp" target="content\net45\Bootstrap\NetworkPluginBootstrap.cs.pp" />
+                -->
+
+                <!-- store -->
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\DevelopingTrends.MvxPlugins.NFC.dll" target="lib\netcore45\DevelopingTrends.MvxPlugins.NFC.dll" />
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\NdefLibrary.dll" target="lib\netcore45\NdefLibrary.dll" />
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC.WindowsStore\bin\Release\DevelopingTrends.MvxPlugins.NFC.WindowsStore.dll" target="lib\netcore45\DevelopingTrends.MvxPlugins.NFC.WindowsStore.dll" />
+				        <file src="NFCPluginBootstrap.cs.pp" target="content\netcore45\Bootstrap\NFCPluginBootstrap.cs.pp" />
+                
+                <!-- phone -->
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\DevelopingTrends.MvxPlugins.NFC.dll" target="lib\wp8\DevelopingTrends.MvxPlugins.NFC.dll" />
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\NdefLibrary.dll" target="lib\wp8\NdefLibrary.dll" />
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC.WindowsPhone\bin\Release\DevelopingTrends.MvxPlugins.NFC.WindowsPhone.dll" target="lib\wp8\DevelopingTrends.MvxPlugins.NFC.WindowsPhone.dll" />
+				<file src="NFCPluginBootstrap.cs.pp" target="content\wp8\Bootstrap\NFCPluginBootstrap.cs.pp" />
+        
+                <!-- droid -->
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\DevelopingTrends.MvxPlugins.NFC.dll" target="lib\MonoAndroid\DevelopingTrends.MvxPlugins.NFC.dll" />
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\NdefLibrary.dll" target="lib\MonoAndroid\NdefLibrary.dll" />
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC.Droid\bin\Release\DevelopingTrends.MvxPlugins.NFC.Droid.dll" target="lib\MonoAndroid\DevelopingTrends.MvxPlugins.NFC.Droid.dll" />
+				<file src="NFCPluginBootstrap.cs.pp" target="content\MonoAndroid\Bootstrap\NFCPluginBootstrap.cs.pp" />
+                
+                <!-- touch -->
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\DevelopingTrends.MvxPlugins.NFC.dll" target="lib\MonoTouch\DevelopingTrends.MvxPlugins.NFC.dll" />
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC\bin\Release\NdefLibrary.dll" target="lib\MonoTouch\NdefLibrary.dll" />
+                <file src="..\NFC\DevelopingTrends.MvxPlugins.NFC.Touch\bin\iPhone\Release\DevelopingTrends.MvxPlugins.NFC.Touch.dll" target="lib\MonoTouch\DevelopingTrends.MvxPlugins.NFC.Touch.dll" />
+				<file src="TouchNFCPluginBootstrap.cs.pp" target="content\MonoTouch\Bootstrap\NFCPluginBootstrap.cs.pp" />
+                
+        </files>
+</package>
