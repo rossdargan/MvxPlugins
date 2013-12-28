@@ -122,6 +122,9 @@
     <Compile Include="Views\ScanAsMessageView.xaml.cs">
       <DependentUpon>ScanAsMessageView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\WriteTextView.xaml.cs">
+      <DependentUpon>WriteTextView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ScanAsTaskView.xaml.cs">
       <DependentUpon>ScanAsTaskView.xaml</DependentUpon>
     </Compile>
@@ -140,6 +143,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ScanAsMessageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WriteTextView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

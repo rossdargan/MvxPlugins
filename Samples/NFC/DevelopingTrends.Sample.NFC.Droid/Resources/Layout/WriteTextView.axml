@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         local:MvxBind="Text Result; Visibility InvertedVisibility(WritingTag)" />
     <TextView
-        android:text="Please place a NFC tag on the back of the phone. Write in progres..."
+        android:text="Please place a NFC tag on the back of the phone. Write in progress..."
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

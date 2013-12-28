@@ -95,6 +95,7 @@
     <Compile Include="Watcher.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WriteTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevelopingTrends.MvxPlugins.NFC\DevelopingTrends.MvxPlugins.NFC.csproj">

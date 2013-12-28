@@ -67,7 +67,10 @@ namespace DevelopingTrends.Sample.NFC.Core.ViewModels
                 _cancellationTokenSource = new CancellationTokenSource();
 
                 var record = await _nfcReadTask.ReadTag(_cancellationTokenSource.Token, TimeSpan.FromSeconds(30));
-                UpdateDisplay(record.Message);
+                if (record != null)
+                {
+                    UpdateDisplay(record.Message);
+                }
                 _cancellationTokenSource = null;
 
             }

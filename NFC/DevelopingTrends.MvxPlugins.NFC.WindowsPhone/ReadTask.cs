@@ -34,7 +34,8 @@ namespace DevelopingTrends.MvxPlugins.NFC.WindowsPhone
             {
                 subscription = _proximityDevice.SubscribeForMessage("NDEF", (sender, message) =>
                 {
-                    result.SetResult(GetMessage(message));
+                    string id=sender.DeviceId;
+                    result.TrySetResult(GetMessage(message));
                 });
                 try
                 {

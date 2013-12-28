@@ -9,6 +9,9 @@ namespace DevelopingTrends.MvxPlugins.NFC
 {
     public class MessageReceived : MvxMessage
     {
+        /// <summary>
+        /// TagID will only be populated on Android as MS does not have apis that allow access to this.
+        /// </summary>
         public string TagId { get; set; }
         public NdefLibrary.Ndef.NdefMessage Message { get; set; }
 

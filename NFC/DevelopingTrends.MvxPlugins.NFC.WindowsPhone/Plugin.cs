@@ -15,11 +15,13 @@ namespace DevelopingTrends.MvxPlugins.NFC.WindowsPhone
 
         public void Load()
         {
+            Mvx.RegisterType<IWriteTask, WriteTask>();
+            
             Mvx.RegisterType<IReadTask, ReadTask>();
 
             IMvxMessenger messenger = Mvx.Resolve<IMvxMessenger>();
             Mvx.RegisterSingleton<IWatcher>(() => new Watcher(messenger));
-
+            
         }
     }
 }

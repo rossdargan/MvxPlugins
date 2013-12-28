@@ -1,5 +1,5 @@
 <views:MvxPhonePage
-    x:Class="DevelopingTrends.Sample.NFC.WindowsPhone.Views.HomeView"
+    x:Class="DevelopingTrends.Sample.NFC.WindowsPhone.Views.WriteTextView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -24,18 +24,19 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="NFC MVX Plugin" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="Home" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" Text="Scan As Task" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel>
-                <Button Command="{Binding ScanAsTaskCommand}" Content="Scan As Task"></Button>
+                <TextBox Text="{Binding Message,Mode=TwoWay}"></TextBox>
+                <Button Command="{Binding WriteTagCommand}" Content="Write Tag" IsEnabled="{Binding WritingTag, Converter={StaticResource InvertedConverter}}"></Button>
 
-                <Button Command="{Binding ScanAsMessageCommand}" Content="Scan As Message"></Button>
-                <Button Command="{Binding WriteTextCommand}" Content="Write As Task"></Button>
-
-            </StackPanel>
+                <TextBlock Text="{Binding Result}"  TextWrapping="Wrap"></TextBlock>
+                <TextBlock Text="Please place a NFC tag on the back of the phone. Write in progress..." TextWrapping="Wrap" Visibility="{Binding WritingTag, Converter={StaticResource VisibilityConverter}}"></TextBlock>
+                
+		   </StackPanel>
         </Grid>
     </Grid>
 
