@@ -78,7 +78,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
         /// </summary>
         protected void AttachEvents()
         {
-            MvxEventSourceActivity droidEvents = TopActivity as MvxEventSourceActivity;
+            IMvxEventSourceActivity droidEvents = TopActivity as IMvxEventSourceActivity;
             if (droidEvents != null)
             {
                 droidEvents.NewIntentCalled += droidEvents_NewIntentCalled;
@@ -92,7 +92,7 @@ namespace DevelopingTrends.MvxPlugins.NFC.Droid
         /// </summary>
         protected void DetachEvents()
         {
-            MvxEventSourceActivity droidEvents = TopActivity as MvxEventSourceActivity;
+            IMvxEventSourceActivity droidEvents = TopActivity as IMvxEventSourceActivity;
 
             if (droidEvents != null)
             {
