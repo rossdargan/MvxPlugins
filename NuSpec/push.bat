@@ -1,0 +1,1 @@
+nuget push DevelopingTrends.MvxPlugins.Nfc.nupkg
