@@ -13,4 +13,4 @@ Current Plugins
 
 Questions/Comments
 -------------------
-This library was written by Ross Dargan ([@rossdargan](https://twitter.com/rossdargan/). Feel free to log an issue, or create a pull request.
+This library was written by Ross Dargan ([@rossdargan](https://twitter.com/rossdargan/)). Feel free to log an issue, or create a pull request.
