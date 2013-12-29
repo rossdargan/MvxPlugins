@@ -9,7 +9,7 @@ All of the plugins not in development are published to NuGet. For more info abou
 
 Current Plugins
 ---------------------
-* [NFC: This plugin allows you to read and write NDEF tags](https://github.com/rossdargan/MvxPlugins/tree/master/NFC/readme.md).
+* [NFC: This plugin allows you to read and write NDEF tags](https://github.com/rossdargan/MvxPlugins/blob/master/NFC/README.md).
 
 Questions/Comments
 -------------------
